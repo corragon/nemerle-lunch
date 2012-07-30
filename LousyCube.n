@@ -1,0 +1,57 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nemerle_Lunch
+{
+  /// <summary>
+  /// Description of LousyCube.
+  /// </summary>
+  class LousyCube
+  {
+      public static WhatIsACube() : string
+      {
+         "A really ugly car"
+      }
+
+      density : float;
+
+      public this (height : float, width : float, depth : float, mass : float)
+      {
+         Height = height;
+         Width = width;
+         Depth = depth;
+         Mass = mass;
+         density = mass / Volume;
+      }
+
+      public Width : float { get; set; }
+      public Height : float { get; set; }
+      public Depth : float { get; set; }
+      public Mass : float { get; set; }
+
+      public Volume : float
+      {
+         get { Height * Width * Depth; }
+      }
+      
+      public variant CubicUnit
+      {
+          | Meter
+          | Centemeter
+          | Millimeter
+      }
+      
+      public GetVolumeIn(_units : CubicUnit) : float
+      {
+          mutable temp = Height * Width * Depth;
+          // some calculation
+          temp;
+      }
+  }
+}

@@ -7,11 +7,29 @@ using System.Collections.Generic;
 using System.Console;
 using System.Linq;
 
+using Nemerle_Lunch;
+
 module Program
 {
-  Main() : void
-  {
-    WriteLine("Hi!");
-    _ = ReadLine();
-  }
+   Main() : void
+   {      
+      def cubeCS = LousyCube(4, 5, 6, 1.4f);
+      WriteLine(LousyCube.WhatIsACube());
+      WriteLine("I just made a cube!");
+      WriteLine("Volume: " + cubeCS.Volume);
+      _ = ReadLine();
+
+
+      YouShouldCheckoutSomeLinks()
+   }
+
+   YouShouldCheckoutSomeLinks() : void
+   {
+
+      // JetBrains and Nemerle
+      //Hadi Hariri's post
+      //http://blogs.jetbrains.com/dotnet/2012/06/jetbrains-and-nemerle/
+      //Russian article on N2
+      //http://www.rsdn.ru/article/nemerle/N2/N2-Project.rsdnml.xml
+   }
 }

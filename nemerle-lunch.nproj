@@ -8,15 +8,17 @@
     <ProjectGuid>{987441cb-2a3f-48af-9e41-eb268efd7742}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nemerle_lunch</RootNamespace>
-    <AssemblyName>nemerle_lunch</AssemblyName>
+    <RootNamespace>Nemerle_Lunch</RootNamespace>
+    <AssemblyName>Nemerle_Lunch</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NoStdLib>true</NoStdLib>
     <NemerleVersion>Net-4.0</NemerleVersion>
     <NemerleBinPathRoot Condition=" '$(NemerleBinPathRoot)' == '' ">$(ProgramFiles)\Nemerle</NemerleBinPathRoot>
     <Nemerle Condition=" '$(Nemerle)' == '' ">$(NemerleBinPathRoot)\$(NemerleVersion)</Nemerle>
-    <Name>nemerle-lunch</Name>
+    <Name>Nemerle-Lunch</Name>
+    <StartupObject />
+    <ApplicationIcon />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,11 +61,24 @@
     </MacroReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Foo.n">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LousyCube.n">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Main.n" />
     <Compile Include="Properties\AssemblyInfo.n" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSharp\CSharp.csproj">
+      <Name>CSharp</Name>
+      <Project>{d226b774-bdee-4778-959c-e99b570a1f7b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(Nemerle)\Nemerle.MSBuild.targets" />
   <!--

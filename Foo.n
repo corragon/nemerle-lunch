@@ -1,0 +1,30 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nemerle_Lunch
+{
+  /// <summary>
+  /// Description of Foo.
+  /// </summary>
+  module Foo
+  {
+     public Bar() : string
+     {
+        "Does this work??"
+     }
+  }
+  class Billy
+  {
+     public Name : string;
+     public this ()
+     {
+        Name = "Billy";
+     }
+  }
+}
