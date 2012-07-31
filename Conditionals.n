@@ -1,0 +1,43 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Console;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nemerle_Lunch
+{
+   module Conditionals
+   {
+      public Example() : void
+      {
+         WriteLine(ifElse(20));
+         WriteLine(ifElse(2));
+         
+         WriteLine(whenUnless(10));
+         WriteLine(whenUnless(20));
+         WriteLine(whenUnless(89));
+      }
+      
+      ifElse(n : int) : string
+      {
+         //if statements must be followed by an else
+         if (n > 10) $"$n is larger than ten!"
+         else $"$n is smaller than ten."
+      }
+
+      whenUnless(age : int) : string
+      {
+         mutable return = $"$age is a good age";
+         
+         when(age is 10) return = "You're ten years old!";
+
+         unless (age < 21) return = $"How does it feel being $age old?";
+         
+         return
+      }
+   }
+}

@@ -1,0 +1,95 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Console;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nemerle_Lunch
+{
+   module Loopy
+   {
+      public Example() : void
+      {
+
+         StandardForLoop();
+         
+         ForEachRange();
+         
+         ForEachRangeReversed();
+         
+         WhileLoops();
+         
+         ForEachInList();
+         
+         Repeat();
+         
+         def power (num : int, pow : int) : int
+         {
+            (num ** pow) :> int
+         }
+      }
+      
+      StandardForLoop() : void
+      {
+         Write("Basic C-like for loop: ");
+         for (mutable i = 0; i < 23; i+=2) 
+            Write($"$i ");
+         WriteLine("\n");
+      }
+      
+      ForEachRange() : void
+      {
+         Write("For each-- range by ones: ");
+         foreach (i in [1..10])
+            Write($"$i ");
+         WriteLine("\n");
+      }
+      
+      ForEachRangeReversed() : void
+      {
+         Write("For each-- reverse range by twos: ");
+         foreach (i in [22, 20..0])
+            Write($"$i ");
+         WriteLine("\n");
+      }
+      
+      WhileLoops() : void
+      {
+         Write("While loops: ");
+         mutable i = 1;
+         while (i <= 6)
+         {
+            Write($"$(i**i) ");
+            i++;
+         }
+         do
+         {
+            Write($"$i ");
+            i++;
+         } while( i < 20 );
+
+         WriteLine("\n");
+      }
+      
+      ForEachInList() : void
+      {
+         Write("For each-- in list: ");
+         def lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+         foreach (i in lst)
+            Write($"$i ");
+         WriteLine("\n");
+      }
+      
+      Repeat() : void
+      {
+         Write("Repeat: ");
+         repeat(13)
+            Write("13 ");
+         WriteLine("\n");
+      }
+   }
+}

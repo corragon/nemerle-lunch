@@ -61,7 +61,13 @@
     </MacroReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conditionals.n">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Foo.n">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loopy.n">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LousyCube.n">

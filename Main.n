@@ -13,19 +13,33 @@ module Program
 {
    Main() : void
    {      
-      def cubeCS = LousyCube(4, 5, 6, 1.4f);
-      WriteLine(LousyCube.WhatIsACube());
-      WriteLine("I just made a cube!");
-      WriteLine("Volume: " + cubeCS.Volume);
+      //Conditionals.Example();
+      
+      //Loopy.Example();
+   
+      //LousyCube.WhatIsACube();
+   
+      //Functions.Example();
+   
+      //Functional.Example();
+   
+      //Macros.Example();
+   
+      //BestOfBothWorlds.Part1();
+   
+      //BestOfBothWorlds.Part2();
+      
       _ = ReadLine();
-
-
       YouShouldCheckoutSomeLinks()
    }
 
    YouShouldCheckoutSomeLinks() : void
    {
-
+      // General helpful links (mostly the Nemerle wiki)
+      //For C# people especially
+      //http://nemerle.org/wiki/index.php?title=Quick_Guide
+      
+      
       // JetBrains and Nemerle
       //Hadi Hariri's post
       //http://blogs.jetbrains.com/dotnet/2012/06/jetbrains-and-nemerle/
