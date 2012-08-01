@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Nemerle-Lunch", "Nemerle-Lunch.nproj", "{987441CB-2A3F-48AF-9E41-EB268EFD7742}"
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Nemerle-Lunch", "nemerle-lunch\Nemerle-Lunch.nproj", "{987441CB-2A3F-48AF-9E41-EB268EFD7742}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "..\CSharp\CSharp.csproj", "{D226B774-BDEE-4778-959C-E99B570A1F7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{D226B774-BDEE-4778-959C-E99B570A1F7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
