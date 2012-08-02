@@ -1,0 +1,72 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Console;
+using System.Collections.Generic;
+
+namespace Nemerle_Lunch
+{
+  module Functions
+  {
+     public Example() : void
+     {
+        Invite("Jill");
+        
+        WriteLine("Secret message: " + disClosure()());
+        
+        WriteLine();
+        
+        WriteLine($[1 .. 10].Map(fun (x) { x * x }));
+        
+        WriteLine($[0,5 .. 20].Map(x => x * x ));
+        
+        WriteLine();
+        
+        def cook(items : string) { $"I'm cookin' some $items!" }
+        
+        WriteLine(DoAction(cook, "pho"));
+        
+        WriteLine(DoAction(i => $"Throw out smelly $i", "vegtables"));
+     }
+     
+     Invite(person : string) : void
+     {
+        def sayHi(name : string)
+        {
+           $"Hi there $name"
+        }
+        
+        def inviteToParty(name : string)
+        {
+           $"Won't you attend my party $name?"
+        }       
+        
+        def sayGoodbye()
+        {
+           "See you around!"
+        }
+        
+        WriteLine(sayHi(person));
+        WriteLine(inviteToParty(person));
+        WriteLine(sayGoodbye());
+     }
+     
+     disClosure() : void -> string
+     {
+        def secretMessage = "I'm inside the compound";
+        def mole() : string
+        {
+           secretMessage
+        }
+        mole
+     }
+     
+     DoAction(action : string -> string, thing : string) : string
+     {
+        action(thing);
+     }
+  }
+}

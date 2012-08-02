@@ -21,7 +21,7 @@ module Program
    
       //Functions.Example();
    
-      //Functional.Example();
+      Functional.Example();
    
       //Macros.Example();
    

@@ -26,11 +26,6 @@ namespace Nemerle_Lunch
          ForEachInList();
          
          Repeat();
-         
-         def power (num : int, pow : int) : int
-         {
-            (num ** pow) :> int
-         }
       }
       
       StandardForLoop() : void

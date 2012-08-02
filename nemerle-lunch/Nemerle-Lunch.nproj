@@ -67,10 +67,19 @@
     <Compile Include="Foo.n">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Functional.n">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions.n">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Loopy.n">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LousyCube.n">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Macros.n">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Main.n" />
