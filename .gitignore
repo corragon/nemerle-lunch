@@ -3,6 +3,7 @@
 [Oo]bj
 *.bak
 *.log
+*.suo
 
 # mstest test results
 TestResults
