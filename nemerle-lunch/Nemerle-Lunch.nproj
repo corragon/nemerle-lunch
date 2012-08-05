@@ -67,7 +67,7 @@
     <Compile Include="Foo.n">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Functional.n">
+    <Compile Include="Matching.n">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Functions.n">

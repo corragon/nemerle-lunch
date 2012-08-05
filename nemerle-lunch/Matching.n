@@ -1,0 +1,111 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Console;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Nemerle_Lunch
+{
+   //"This is like the switch statement in C, 
+   // but using a large dose of steroids."
+   module Matching
+   {
+      public Example() : void
+      {
+         matchLiterals();
+         
+         matchLists($[1..20]);
+         
+         matchTypes();
+         
+         //matchRecords();
+      }
+
+      matchLiterals() : void
+      {
+         match ("Bangkok")
+         {
+            | "Bangkok" => WriteLine("How is Thailand?")
+            | "Kansas City" => WriteLine("Check out the BBQ man")
+            | _ => WriteLine("Where are you?") //try omitting this
+         }
+         
+         match (43)
+         {
+            | 42 => WriteLine("Well... yes")
+            | 1337 => WriteLine("Aren't you special")
+            | _ => WriteLine("I'm sorry, but no")
+         }
+         
+      }
+      
+      matchLists(l : list[int]) : void
+      {
+         match (l) {
+           | [1, 1] => WriteLine("One twice, length two")
+           | [_, 2] => WriteLine("Two In in second, length two")
+           | 1 :: _ => WriteLine("Begins with one, and I don't care")
+           | _ :: 96 :: _ => WriteLine("Something, second is 96, then more stuff")
+           | [] => WriteLine("Well that's nothing!")
+           | _ => WriteLine("Meh??")
+         }
+         
+         def display[T] (l : list [T]) : void {
+            match (l) {
+               | head :: tail =>
+               Write ($ "$head, ");
+               display (tail)
+               | [] => WriteLine("end")
+            }
+         }
+         
+         display(l);
+      }
+      
+      matchTypes() : void
+      {
+         def value = 32;
+         
+         match (value : object)
+         {
+            | v is int => WriteLine($"Calculate cool stuff with $v")
+            | v is string => WriteLine($"Try to do cool stuff with $(int.Parse(v))")
+            | _ => WriteLine("What are you trying to do?")
+         }
+      }
+      
+      matchFunctions() : void
+      {
+         
+      }
+      
+      head[T] (l : list [T]) : T
+      {
+         match (l)
+         {
+            | [] => throw ArgumentException("Empty list")
+            | h :: _ => h
+         }
+      }
+      tail[T] (l : list [T]) : list [T]
+      {
+         match (l)
+         {
+            | [] => []
+            | _ :: t => t
+         }
+      }
+      length[T] (l : list [T]) : int
+      {
+         match(l)
+         {
+            | [] => 0
+            | _ :: t => 1 + length(t)
+         }
+      }
+   }
+}
