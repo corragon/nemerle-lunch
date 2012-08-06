@@ -34,7 +34,7 @@ namespace Nemerle_Lunch
             | _ => WriteLine("Where are you?") //try omitting this
          }
          
-         match (43)
+         match (35)
          {
             | 42 => WriteLine("Well... yes")
             | 1337 => WriteLine("Aren't you special")

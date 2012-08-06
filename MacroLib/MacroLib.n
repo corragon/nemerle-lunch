@@ -1,0 +1,29 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Compiler;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace MacroLib
+{
+   public macro PrintTime()
+   {
+    <[ ($"Now $(DateTime.Now)") ]>
+   }
+
+   public macro @hl7(segment : string)
+   syntax ("hl7", ".", segment)
+   {   
+      // Some advanced parsing of the string
+      def parsedName = "OBR";
+      def parsedIndex = 2;
+      def parsedField = 35;
+      
+      <[ ContrivedHl7.MessageParser.Parse($parsedName, $parsedIndex, $parsedField); ]>
+   }
+}

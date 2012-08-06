@@ -12,28 +12,36 @@ using MacroLib;
 
 namespace Nemerle_Lunch
 {
-  /// <summary>
-  /// Description of Macros.
-  /// </summary>
-  module Macros
-  {
-     public Example() : void
-     {
-        // At the beginning of their section on macros, the authors
-        //(of the wiki at least) give this warning about the use of macros:
-        //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1#Warning
-        
-        // TLDR version
-        // Macros are great, but too much use is very bad
-        // ONLY use a macro when nothing else will satisfy
-        
-        // They might be good...
-        // When you need to generate lots of obnoxious template code
-        // When some complexity could be reduced by using simple DSL
-        // When you want automation provided by the compiler's API
-        // When you miss a construct that helps safety or is concise
-        
-        WriteLine(PrintTime());
-     }
-  }
+   module Macros
+   {
+      public Example() : void
+      {
+      // At the beginning of their section on macros, the authors
+      //(of the wiki at least) give this warning about the use of macros:
+      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1#Warning
+
+      // TLDR version
+      // Macros are great, but too much use is very bad
+      // ONLY use a macro when nothing else will satisfy
+      //
+      // They might be good...
+      // When you need to generate lots of obnoxious template code
+      // When some complexity could be reduced by using simple DSL
+      // When you want automation provided by the compiler's API
+      // When you miss a construct that helps safety or is concise
+
+      //https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
+         
+         WriteLine(PrintTime());
+
+         ContrivedHL7();
+      }
+
+      ContrivedHL7() : void
+      {
+         def someHl7Info = hl7."OBR.2.35";
+         WriteLine(someHl7Info);
+      }
+
+   }
 }
