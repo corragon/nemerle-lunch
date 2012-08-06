@@ -11,11 +11,18 @@ using System.Text.RegularExpressions;
 
 namespace MacroLib
 {
-   public macro PrintTime()
+   public macro @because(cond, body)
+   syntax ("because", "(", cond, ")", body)
    {
-    <[ ($"Now $(DateTime.Now)") ]>
+      <[ 
+      match ($cond)
+      {
+         | true => $body : void
+         | _ => ()
+      }
+      ]>
    }
-
+   
    public macro @hl7(segment : string)
    syntax ("hl7", ".", segment)
    {   
@@ -23,7 +30,7 @@ namespace MacroLib
       def parsedName = "OBR";
       def parsedIndex = 2;
       def parsedField = 35;
-      
+
       <[ ContrivedHl7.MessageParser.Parse($parsedName, $parsedIndex, $parsedField); ]>
    }
 }

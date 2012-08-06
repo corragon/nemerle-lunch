@@ -30,16 +30,25 @@ namespace Nemerle_Lunch
       // When you want automation provided by the compiler's API
       // When you miss a construct that helps safety or is concise
 
-      //https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
-         
-         WriteLine(PrintTime());
+      // Examples
+      //Long: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
+      //Simple: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L320
 
+         WriteLine("\nBecause: probably not useful...");
+         because ( true == true )
+         {
+            WriteLine("The universe is still intact!");
+         }
+        
+
+         // Compile-time parsing of strings into obnoxious syntax
          ContrivedHL7();
       }
 
       ContrivedHL7() : void
       {
          def someHl7Info = hl7."OBR.2.35";
+         WriteLine();
          WriteLine(someHl7Info);
       }
 
