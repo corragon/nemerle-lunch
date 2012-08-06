@@ -39,6 +39,10 @@ module Program
       //For C# people especially
       //http://nemerle.org/wiki/index.php?title=Quick_Guide
       
+      //For learning about Macros
+      //http://nemerle.org/wiki/index.php?title=Macros
+      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1
+      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_2
       
       // JetBrains and Nemerle
       //Hadi Hariri's post
