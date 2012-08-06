@@ -1,5 +1,6 @@
 ﻿using Nemerle;
 using Nemerle.Collections;
+using Nemerle.Compiler;
 using Nemerle.Text;
 using Nemerle.Utility;
 
@@ -7,16 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Nemerle_Lunch
+namespace MacroLib
 {
-  /// <summary>
-  /// Description of Functional.
-  /// </summary>
-  module Functional
+  public macro PrintTime()
   {
-     public Example() : void
-     {
-        
-     }
+    <[ ($"Now $(DateTime.Now)") ]>
   }
 }

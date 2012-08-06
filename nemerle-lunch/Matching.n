@@ -22,7 +22,7 @@ namespace Nemerle_Lunch
          
          matchTypes();
          
-         //matchRecords();
+         classyMatching();
       }
 
       matchLiterals() : void
@@ -78,11 +78,27 @@ namespace Nemerle_Lunch
          }
       }
       
-      matchFunctions() : void
+      classyMatching() : void
       {
-         
       }
       
+      //matchFunctions() : void
+      //{
+      //   def A (value : int) { $"$value" }
+      //   def B (value : bool) { $"$value" }
+      //   def C (l : list[_]) { string.Join(", ", l.ToArray()) }
+      //
+      //   def doWith(f : _ -> string, something : object)
+      //   {
+      //      match (f)
+      //      {
+      //         | f is int -> string => f(142)
+      //         | f is bool -> string => f("things!")
+      //      }
+      //   }
+      //}
+      
+      #region "Simple functional exercises I started"
       head[T] (l : list [T]) : T
       {
          match (l)
@@ -107,5 +123,6 @@ namespace Nemerle_Lunch
             | _ :: t => 1 + length(t)
          }
       }
+      #endregion
    }
 }

@@ -4,8 +4,11 @@ using Nemerle.Text;
 using Nemerle.Utility;
 
 using System;
+using System.Console;
 using System.Collections.Generic;
 using System.Linq;
+
+using MacroLib;
 
 namespace Nemerle_Lunch
 {
@@ -16,7 +19,7 @@ namespace Nemerle_Lunch
   {
      public Example() : void
      {
-        
+        WriteLine(PrintTime());
      }
   }
 }

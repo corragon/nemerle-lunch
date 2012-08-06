@@ -5,6 +5,8 @@ Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "Nemerle-Lunch", "nemerle-lu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{D226B774-BDEE-4778-959C-E99B570A1F7B}"
 EndProject
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "MacroLib", "MacroLib\MacroLib.nproj", "{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{D226B774-BDEE-4778-959C-E99B570A1F7B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D226B774-BDEE-4778-959C-E99B570A1F7B}.Release|x86.ActiveCfg = Release|x86
 		{D226B774-BDEE-4778-959C-E99B570A1F7B}.Release|x86.Build.0 = Release|x86
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

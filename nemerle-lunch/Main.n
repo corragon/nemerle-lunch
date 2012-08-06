@@ -21,9 +21,9 @@ module Program
    
       //Functions.Example();
    
-      Matching.Example();
+      //Matching.Example();
    
-      //Macros.Example();
+      Macros.Example();
    
       //BestOfBothWorlds.Part1();
    
