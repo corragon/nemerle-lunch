@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csp
 EndProject
 Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "MacroLib", "MacroLib\MacroLib.nproj", "{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContrivedHl7", "ContrivedHl7\ContrivedHl7.csproj", "{B2B2C158-5588-4F29-AEAE-70733D09ED39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,16 @@ Global
 		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{F1652DB6-C973-4DB2-AA10-C19AFFFE4D53}.Release|x86.ActiveCfg = Release|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B2B2C158-5588-4F29-AEAE-70733D09ED39}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

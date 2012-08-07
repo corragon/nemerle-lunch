@@ -62,11 +62,18 @@
     </MacroReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Macros.n" />
+    <Compile Include="MacroLib.n" />
     <Compile Include="Properties\AssemblyInfo.n" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContrivedHl7\ContrivedHl7.csproj">
+      <Name>ContrivedHl7</Name>
+      <Project>{b2b2c158-5588-4f29-aeae-70733d09ed39}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(Nemerle)\Nemerle.MSBuild.targets" />
   <!--

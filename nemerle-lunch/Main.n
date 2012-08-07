@@ -21,7 +21,7 @@ module Program
    
       //Functions.Example();
    
-      //Matching.Example();
+      Matching.Example();
    
       Macros.Example();
    
@@ -30,10 +30,9 @@ module Program
       //BestOfBothWorlds.Part2();
       
       _ = ReadLine();
-      YouShouldCheckoutSomeLinks()
    }
 
-   YouShouldCheckoutSomeLinks() : void
+   _YouShouldCheckoutSomeLinks() : void
    {
       // General helpful links (mostly the Nemerle wiki)
       //For C# people especially

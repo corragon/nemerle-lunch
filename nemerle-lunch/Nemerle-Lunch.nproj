@@ -89,14 +89,16 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSharp\CSharp.csproj">
-      <Name>CSharp</Name>
-      <Project>{d226b774-bdee-4778-959c-e99b570a1f7b}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\MacroLib\MacroLib.nproj">
+    <MacroProjectReference Include="..\MacroLib\MacroLib.nproj">
       <Name>MacroLib</Name>
       <Project>{f1652db6-c973-4db2-aa10-c19afffe4d53}</Project>
+      <Private>False</Private>
+    </MacroProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContrivedHl7\ContrivedHl7.csproj">
+      <Name>ContrivedHl7</Name>
+      <Project>{b2b2c158-5588-4f29-aeae-70733d09ed39}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
