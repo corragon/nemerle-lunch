@@ -8,7 +8,7 @@ using System.Console;
 using System.Linq;
 
 using Nemerle_Lunch;
-//using CSharp;
+using CubeCSharp;
 
 module Program
 {
@@ -19,7 +19,7 @@ module Program
       Loopy.Example();
    
       LousyCube.WhatIsACube();
-      //Cube.WhatIsACube();
+      Cube.WhatIsACube();
    
       Functions.Example();
    
