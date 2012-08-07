@@ -48,9 +48,19 @@ namespace Nemerle_Lunch
       ContrivedHL7() : void
       {
          WriteLine("Completely and absolutely contrived HL7 parsing example:");
-         def someHl7Info = hl7."OBR.2.35";
+         
+         def _reallyBadWayOfGettingHl7 = ContrivedHl7.MessageParser.Parse("OBR", 2, 3, 1, 2, 5);
+         
+         def _hideousWayOfGettingHl7 = ContrivedHl7.MessageParser.Parse(name = "OBR", index = 2, field = 3, repetition = 1, component = 2, subcomp = 5);
+         
+         def prettyHl7Path1 = hl7."OBR[2].3[1].2.5";
+         def prettyHl7Path2 = hl7."PID.3.5";
+         
          WriteLine();
-         WriteLine(someHl7Info);
+         WriteLine(prettyHl7Path1);
+         
+         WriteLine();
+         WriteLine(prettyHl7Path2);
       }
 
    }

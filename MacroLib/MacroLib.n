@@ -22,15 +22,39 @@ namespace MacroLib
       }
       ]>
    }
-   
+
    public macro @hl7(segment : string)
    syntax ("hl7", ".", segment)
    {   
-      // Some advanced parsing of the string
-      def parsedName = "OBR";
-      def parsedIndex = 2;
-      def parsedField = 35;
+      // aka, superFancyRegexThatStephenWrote
+      def reg = Regex(@"^(?<segmentName>[A-Z]{3})(?:(?:\[(?<segmentIndex>\d+)\])?(?:\.(?<fieldNumber>\d+)(?:\[(?<fieldRepetition>\d+)\])?(?:\.(?<component>\d+)(?:\.(?<subComponent>\d+))?)?)?)?$", RegexOptions.Compiled);
+      mutable m = reg.Match(segment);
 
-      <[ ContrivedHl7.MessageParser.Parse($parsedName, $parsedIndex, $parsedField); ]>
+      // Some advanced parsing of the string
+      def segment = m.Groups[reg.GroupNumberFromName("segmentName")].Value;
+      def segIndexRaw = m.Groups[reg.GroupNumberFromName("segmentIndex")].Value;
+      def fieldNumRaw = m.Groups[reg.GroupNumberFromName("fieldNumber")].Value;
+      def fieldRepRaw = m.Groups[reg.GroupNumberFromName("fieldRepetition")].Value;
+      def componentRaw = m.Groups[reg.GroupNumberFromName("component")].Value;
+      def subComponentRaw = m.Groups[reg.GroupNumberFromName("subComponent")].Value;
+      
+      mutable segIndex;
+      mutable fieldNum;
+      mutable fieldRep;
+      mutable component;
+      mutable subComponent;
+      
+      unless(Int32.TryParse(segIndexRaw, out segIndex))
+         segIndex = 0;
+      unless(Int32.TryParse(fieldNumRaw, out fieldNum))
+         fieldNum = 1;
+      unless(Int32.TryParse(fieldRepRaw, out fieldRep))
+         fieldRep = 0;
+      unless(Int32.TryParse(componentRaw, out component))
+         component = 1;
+      unless(Int32.TryParse(subComponentRaw, out subComponent))
+         subComponent = 1;
+
+      <[ ContrivedHl7.MessageParser.Parse($segment, $segIndex, $fieldNum, $fieldRep, $component, $subComponent); ]>
    }
 }
