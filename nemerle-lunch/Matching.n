@@ -23,19 +23,19 @@ namespace Nemerle_Lunch
          matchTypes();
          
          classyMatching();
+         
+         matchingInFunctions();
       }
 
       matchLiterals() : void
       {
-         match ("Bangkok")
-         {
+         match ("Bangkok") {
             | "Bangkok" => WriteLine("How is Thailand?")
             | "Kansas City" => WriteLine("Check out the BBQ man")
             | _ => WriteLine("Where are you?") //try omitting this
          }
          
-         match (35)
-         {
+         match (35) {
             | 42 => WriteLine("Well... yes")
             | 1337 => WriteLine("Aren't you special")
             | _ => WriteLine("I'm sorry, but no")
@@ -57,8 +57,8 @@ namespace Nemerle_Lunch
          def display[T] (l : list [T]) : void {
             match (l) {
                | head :: tail =>
-               Write ($ "$head, ");
-               display (tail)
+                  Write ($ "$head, ");
+                  display (tail)
                | [] => WriteLine("end")
             }
          }
@@ -70,8 +70,7 @@ namespace Nemerle_Lunch
       {
          def value = 32;
          
-         match (value : object)
-         {
+         match (value : object) {
             | v is int => WriteLine($"Calculate cool stuff with $v")
             | v is string => WriteLine($"Try to do cool stuff with $(int.Parse(v))")
             | _ => WriteLine("What are you trying to do?")
@@ -80,6 +79,55 @@ namespace Nemerle_Lunch
       
       classyMatching() : void
       {
+         def What'sInTheToaster (t : Toaster) : string
+         {
+            if (t.Toast == "")
+               t.Bread
+            else
+               t.Toast
+         }
+         // neat, but not better
+         def What'sInTheMatchbox (m : Matchbox) : string
+         {
+            match (m) {
+               | (Matches = 0) => "no matches"
+               | (Matches = n) => $"$n matches"
+            }
+         }
+         
+         def aBreadster = Toaster("", "wheat");
+         def aToaster = Toaster("black 'n crispy", "");
+         def myMatchbox = Matchbox(4);
+         def emptyBox = Matchbox(0);
+         
+         repeat(2) WriteLine();
+         WriteLine("Matching on the fields in a class");
+         
+         WriteLine("The breadster has " + What'sInTheToaster(aBreadster) + " bread");
+         WriteLine("The toaster has " + What'sInTheToaster(aToaster) + " bread");
+         WriteLine();
+         WriteLine($"The matchbox has $(What'sInTheMatchbox(myMatchbox))");
+         WriteLine($"The empty box has $(What'sInTheMatchbox(emptyBox))");
+      }
+      
+      matchingInFunctions() : void
+      {
+         def factorial(n, acc) {
+            | (0, _)
+            | (1, _) => acc
+            | _      => factorial(n - 1, n * acc)
+         }
+         
+         def factorial2(n, acc) {
+            match(n, acc) {
+               | (0, _)
+               | (1, _) => acc
+               | _      => factorial2(n - 1, n * acc)
+            }
+         }
+         repeat(2) WriteLine();
+         WriteLine($"6 factorial is $(factorial(6, 1))");
+         WriteLine($"6 factorial2 is $(factorial2(6, 1))");
       }
       
       //matchFunctions() : void
@@ -101,28 +149,44 @@ namespace Nemerle_Lunch
       #region "Simple functional exercises I started"
       head[T] (l : list [T]) : T
       {
-         match (l)
-         {
+         match (l) {
             | [] => throw ArgumentException("Empty list")
             | h :: _ => h
          }
       }
       tail[T] (l : list [T]) : list [T]
       {
-         match (l)
-         {
+         match (l) {
             | [] => []
             | _ :: t => t
          }
       }
       length[T] (l : list [T]) : int
       {
-         match(l)
-         {
-            | [] => 0
-            | _ :: t => 1 + length(t)
-         }
+         | [] => 0
+         | _ :: t => 1 + length(t)
       }
       #endregion
+   }
+            
+   class Toaster
+   {
+      public Toast : string;
+      public Bread : string;
+      
+      public this (toast : string, bread : string)
+      {
+         Toast = toast;
+         Bread = bread;
+      }
+   }
+   class Matchbox
+   {
+      public Matches : int;
+      
+      public this ( number : int )
+      {
+         Matches = number;
+      }
    }
 }

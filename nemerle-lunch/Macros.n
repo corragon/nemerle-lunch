@@ -47,6 +47,7 @@ namespace Nemerle_Lunch
 
       ContrivedHL7() : void
       {
+         WriteLine("Completely and absolutely contrived HL7 parsing example:");
          def someHl7Info = hl7."OBR.2.35";
          WriteLine();
          WriteLine(someHl7Info);
