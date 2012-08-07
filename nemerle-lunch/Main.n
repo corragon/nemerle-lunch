@@ -8,18 +8,20 @@ using System.Console;
 using System.Linq;
 
 using Nemerle_Lunch;
+using CSharp.Basic;
 
 module Program
 {
    Main() : void
    {      
-      //Conditionals.Example();
+      Conditionals.Example();
       
-      //Loopy.Example();
+      Loopy.Example();
    
-      //LousyCube.WhatIsACube();
+      LousyCube.WhatIsACube();
+      Cube.WhatIsACube();
    
-      //Functions.Example();
+      Functions.Example();
    
       Matching.Example();
    

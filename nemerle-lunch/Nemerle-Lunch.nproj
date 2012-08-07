@@ -101,6 +101,11 @@
       <Project>{b2b2c158-5588-4f29-aeae-70733d09ed39}</Project>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\CSharp\CSharp.csproj">
+      <Name>CSharp</Name>
+      <Project>{d226b774-bdee-4778-959c-e99b570a1f7b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(Nemerle)\Nemerle.MSBuild.targets" />
   <!--

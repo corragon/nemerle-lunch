@@ -4,19 +4,17 @@ using Nemerle.Text;
 using Nemerle.Utility;
 
 using System;
+using System.Console;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Nemerle_Lunch
 {
-  /// <summary>
-  /// Description of LousyCube.
-  /// </summary>
   class LousyCube
   {
-      public static WhatIsACube() : string
+      public static WhatIsACube() : void
       {
-         "A really ugly car"
+         WriteLine("A really ugly car");
       }
 
       density : float;
@@ -40,8 +38,7 @@ namespace Nemerle_Lunch
          get { Height * Width * Depth; }
       }
       
-      public variant CubicUnit
-      {
+      public variant CubicUnit {
           | Meter
           | Centemeter
           | Millimeter

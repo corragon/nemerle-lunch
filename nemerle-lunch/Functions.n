@@ -30,6 +30,12 @@ namespace Nemerle_Lunch
         WriteLine(DoAction(cook, "pho"));
         
         WriteLine(DoAction(i => $"Throw out smelly $i", "vegtables"));
+        
+        repeat(2) WriteLine();
+        
+        PartialApplication();
+        
+        repeat(2) WriteLine();
      }
      
      Invite(person : string) : void
@@ -67,6 +73,23 @@ namespace Nemerle_Lunch
      DoAction(action : string -> string, thing : string) : string
      {
         action(thing);
+     }
+     
+     PartialApplication() : void
+     {
+         def factorial(n, acc) {
+            if (n==1 || n == 0)
+               acc
+            else
+               factorial(n-1, n*acc)
+         }
+         
+         def factFromOne = factorial(_, 1);
+         def factTimesFour = factorial(_, 4);
+         
+         WriteLine($"7! is normally $(factFromOne(7))");
+         WriteLine($"7! times four is $(factTimesFour(7))");
+         WriteLine($"4! times 7 is $(factorial(_,7)(4))");
      }
   }
 }

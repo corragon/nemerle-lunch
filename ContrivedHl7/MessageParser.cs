@@ -9,7 +9,7 @@ namespace ContrivedHl7
    {
       public static string Parse(string name, int index, int field)
       {
-         return string.Format("I did stuff with...\nname: {0}\nindex: {1}\nfield: {2}", name, index, field);
+         return string.Format("Do something with...\nname: {0}\nindex: {1}\nfield: {2}", name, index, field);
       }
    }
 }

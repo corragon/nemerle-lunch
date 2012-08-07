@@ -6,9 +6,9 @@ namespace CSharp.Basic
 {
    public class Cube
    {
-      static string WhatIsACube()
+      public static void WhatIsACube()
       {
-         return "A really ugly car";
+         Console.WriteLine("A really ugly car (in C#!)");
       }
 
       private float density;
