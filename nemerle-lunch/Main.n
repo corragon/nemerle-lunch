@@ -27,9 +27,9 @@ module Program
    
       Macros.Example();
    
-      //BestOfBothWorlds.Part1();
-   
-      //BestOfBothWorlds.Part2();
+      CSharpWorld.BestOfBothWorlds.Part1();
+      // need one of the namespaces
+      Nemerle_Lunch.BestOfBothWorlds.Part2();
       
       _ = ReadLine();
    }

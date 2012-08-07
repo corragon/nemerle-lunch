@@ -1,0 +1,39 @@
+﻿using Nemerle;
+using Nemerle.Collections;
+using Nemerle.Text;
+using Nemerle.Utility;
+
+using System;
+using System.Console;
+using System.Collections.Generic;
+using System.Linq;
+
+using CSharpWorld;
+
+namespace Nemerle_Lunch
+{
+   module BestOfBothWorlds
+   {
+      public Part2() : void
+      {
+         def shape = Tetrahedron();
+         repeat (2) WriteLine();
+         WriteLine($"A $(shape.Name()) has $(shape.Sides()) sides and $(shape.Vertexes())");
+      }
+   }
+   class Tetrahedron : IPolygon
+   {
+      public Name() : string
+      {
+         "Tetrahedron"
+      }
+      public Sides() : int
+      {
+         4
+      }
+      public Vertexes() : int
+      {
+         4
+      }
+   }
+}

@@ -5,20 +5,18 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{987441cb-2a3f-48af-9e41-eb268efd7742}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{e887ffaf-09f9-492c-993f-8c252d41e7a2}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nemerle_Lunch</RootNamespace>
-    <AssemblyName>Nemerle_Lunch</AssemblyName>
+    <RootNamespace>NemerleWorld</RootNamespace>
+    <AssemblyName>NemerleWorld</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NoStdLib>true</NoStdLib>
     <NemerleVersion>Net-4.0</NemerleVersion>
     <NemerleBinPathRoot Condition=" '$(NemerleBinPathRoot)' == '' ">$(ProgramFiles)\Nemerle</NemerleBinPathRoot>
     <Nemerle Condition=" '$(Nemerle)' == '' ">$(NemerleBinPathRoot)\$(NemerleVersion)</Nemerle>
-    <Name>Nemerle-Lunch</Name>
-    <StartupObject />
-    <ApplicationIcon />
+    <Name>NemerleWorld</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,62 +59,17 @@
     </MacroReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conditionals.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Foo.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="BestOfBothWorlds.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Matching.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Functions.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Loopy.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="LousyCube.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Macros.n">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Main.n" />
+    <Compile Include="Interface.n" />
     <Compile Include="Properties\AssemblyInfo.n" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ContrivedHl7\ContrivedHl7.csproj">
-      <Name>ContrivedHl7</Name>
-      <Project>{b2b2c158-5588-4f29-aeae-70733d09ed39}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <MacroProjectReference Include="..\MacroLib\MacroLib.nproj">
-      <Name>MacroLib</Name>
-      <Project>{f1652db6-c973-4db2-aa10-c19afffe4d53}</Project>
-      <Private>False</Private>
-    </MacroProjectReference>
-    <ProjectReference Include="..\CSharpWorld\CSharpWorld.csproj">
-      <Name>CSharpWorld</Name>
-      <Project>{faa125cb-28a4-434a-8477-70f7a76c606a}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\CubeCSharp\CubeCSharp.csproj">
-      <Name>CubeCSharp</Name>
-      <Project>{d0041ccd-7b42-4fbe-9521-207be96574f2}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(Nemerle)\Nemerle.MSBuild.targets" />
   <!--
 		To modify your build process, add your task inside one of the targets below and uncomment it. 
 		Other similar extension points exist, see Microsoft.Common.targets.
+
 	<Target Name="BeforeBuild">
 	</Target>
 	<Target Name="AfterBuild">

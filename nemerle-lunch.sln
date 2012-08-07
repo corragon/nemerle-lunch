@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContrivedHl7", "ContrivedHl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CubeCSharp", "CubeCSharp\CubeCSharp.csproj", "{D0041CCD-7B42-4FBE-9521-207BE96574F2}"
 EndProject
+Project("{EDCC3B85-0BAD-11DB-BC1A-00112FDE8B61}") = "NemerleWorld", "NemerleWorld\NemerleWorld.nproj", "{E887FFAF-09F9-492C-993F-8C252D41E7A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpWorld", "CSharpWorld\CSharpWorld.csproj", "{FAA125CB-28A4-434A-8477-70F7A76C606A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,26 @@ Global
 		{D0041CCD-7B42-4FBE-9521-207BE96574F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D0041CCD-7B42-4FBE-9521-207BE96574F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D0041CCD-7B42-4FBE-9521-207BE96574F2}.Release|x86.ActiveCfg = Release|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E887FFAF-09F9-492C-993F-8C252D41E7A2}.Release|x86.ActiveCfg = Release|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FAA125CB-28A4-434A-8477-70F7A76C606A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

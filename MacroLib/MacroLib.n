@@ -55,6 +55,6 @@ namespace MacroLib
       unless(Int32.TryParse(subComponentRaw, out subComponent))
          subComponent = 1;
 
-      <[ ContrivedHl7.MessageParser.Parse($segment, $segIndex, $fieldNum, $fieldRep, $component, $subComponent); ]>
+      <[ ContrivedHl7.MessageParser.GetValue($segment, $segIndex, $fieldNum, $fieldRep, $component, $subComponent); ]>
    }
 }

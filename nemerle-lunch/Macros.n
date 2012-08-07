@@ -16,23 +16,29 @@ namespace Nemerle_Lunch
    {
       public Example() : void
       {
-      // At the beginning of their section on macros, the authors
-      //(of the wiki at least) give this warning about the use of macros:
-      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1#Warning
+         // "The first rule about . . [macros] is: don't use them if you do not have to. . . 
+         //almost every macro demonstrates a flaw in either 
+         //the programming language or in the program."
+         // --Bjarne Stroustrup
+         //http://www.idinews.com/macroPhobe.html
+         
+         // At the beginning of their section on macros, the authors
+         //(of the wiki at least) give this warning about the use of macros:
+         //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1#Warning
 
-      // TLDR version
-      // Macros are great, but too much use is very bad
-      // ONLY use a macro when nothing else will satisfy
-      //
-      // They might be good...
-      // When you need to generate lots of obnoxious template code
-      // When some complexity could be reduced by using simple DSL
-      // When you want automation provided by the compiler's API
-      // When you miss a construct that helps safety or is concise
+         // TLDR version
+         // Macros are great, but too much use is very bad
+         // ONLY use a macro when nothing else will satisfy
+         //
+         // They might be good...
+         // When you need to generate lots of obnoxious template code
+         // When some complexity could be reduced by using simple DSL
+         // When you want automation provided by the compiler's API
+         // When you miss a construct that helps safety or is concise
 
-      // Examples
-      //Long: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
-      //Simple: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L320
+         // Examples
+         //Long: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
+         //Simple: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L320
 
          WriteLine("\nBecause: probably not useful...");
          because ( true == true )
@@ -49,18 +55,18 @@ namespace Nemerle_Lunch
       {
          WriteLine("Completely and absolutely contrived HL7 parsing example:");
          
-         def _reallyBadWayOfGettingHl7 = ContrivedHl7.MessageParser.Parse("OBR", 2, 3, 1, 2, 5);
+         def _reallyBadWayOfGettingHl7 = ContrivedHl7.MessageParser.GetValue("OBR", 2, 3, 1, 2, 5);
          
-         def _hideousWayOfGettingHl7 = ContrivedHl7.MessageParser.Parse(name = "OBR", index = 2, field = 3, repetition = 1, component = 2, subcomp = 5);
+         def _hideousWayOfGettingHl7 = ContrivedHl7.MessageParser.GetValue(name = "OBR", index = 2, field = 3, repetition = 1, component = 2, subcomp = 5);
          
-         def prettyHl7Path1 = hl7."OBR[2].3[1].2.5";
-         def prettyHl7Path2 = hl7."PID.3.5";
-         
-         WriteLine();
-         WriteLine(prettyHl7Path1);
+         def prettyWayOfGettingHl7Values1 = hl7."OBR[2].3[1].2.5";
+         def prettyWayOfGettingHl7Values2 = hl7."PID.3.5";
          
          WriteLine();
-         WriteLine(prettyHl7Path2);
+         WriteLine(prettyWayOfGettingHl7Values1);
+         
+         WriteLine();
+         WriteLine(prettyWayOfGettingHl7Values2);
       }
 
    }
