@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Nemerle_Lunch
 {
-  class LousyCube
+  class CubeN
   {
       public static WhatIsACube() : void
       {

@@ -11,6 +11,23 @@ using System.Text.RegularExpressions;
 
 namespace MacroLib
 {
+   public macro It'sMyTimeNow() {
+      <[$"We're at now now: $(DateTime.Now)"]>
+   }
+   
+   public macro @completelyIgnore(body)
+   syntax ("ignore", body)
+   {
+      <[
+      try {
+         $body
+      }
+      catch {
+         | _ => ()
+      }
+      ]>
+   }
+      
    public macro @because(cond, body)
    syntax ("because", "(", cond, ")", body)
    {

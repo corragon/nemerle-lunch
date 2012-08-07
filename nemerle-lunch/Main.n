@@ -18,7 +18,7 @@ module Program
       
       Loopy.Example();
    
-      LousyCube.WhatIsACube();
+      CubeN.WhatIsACube();
       Cube.WhatIsACube();
    
       Functions.Example();
@@ -27,26 +27,36 @@ module Program
    
       Macros.Example();
    
-      CSharpWorld.BestOfBothWorlds.Part1();
-      // need one of the namespaces
-      Nemerle_Lunch.BestOfBothWorlds.Part2();
+      //CSharpWorld.BestOfBothWorlds.Part1();
+      //// need one of the namespaces
+      //Nemerle_Lunch.BestOfBothWorlds.Part2();
+      
+      YouShouldCheckoutSomeLinks();
       
       _ = ReadLine();
    }
 
-   _YouShouldCheckoutSomeLinks() : void
+   YouShouldCheckoutSomeLinks() : void
    {
       // General helpful links (mostly the Nemerle wiki)
       //For C# people especially
       //http://nemerle.org/wiki/index.php?title=Quick_Guide
+      //Because grokking is cool
+      //http://nemerle.org/wiki/index.php?title=Grokking_Nemerle
+      //http://nemerle.org/wiki/index.php?title=Grok_The_rest
       
       //For learning about Macros
       //http://nemerle.org/wiki/index.php?title=Macros
-      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_1
-      //http://nemerle.org/wiki/index.php?title=Macros_-_extended_course._Part_2
+      //Possibilities of use
+      //http://nemerle.org/wiki/index.php?title=MacroUse
+      //Design patterns and macros
+      //http://nemerle.org/Design_patterns#How_we_do_this_with_a_macro
+      //PEG -- parsing of languages, regular expressions, and other sorts of grammar
+      //http://rsdn.ru/article/nemerle/PegGrammar-en.xml
+      
       
       // JetBrains and Nemerle
-      //Hadi Hariri's post
+      //Hadi Hariri's post July 27th, 2012
       //http://blogs.jetbrains.com/dotnet/2012/06/jetbrains-and-nemerle/
       //Russian article on N2
       //http://www.rsdn.ru/article/nemerle/N2/N2-Project.rsdnml.xml

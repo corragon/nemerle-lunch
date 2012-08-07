@@ -35,20 +35,38 @@ namespace Nemerle_Lunch
          // When some complexity could be reduced by using simple DSL
          // When you want automation provided by the compiler's API
          // When you miss a construct that helps safety or is concise
-
+         
          // Examples
          //Long: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L507
          //Simple: https://github.com/rsdn/nemerle/blob/master/macros/core.n#L320
-
+         
          WriteLine("\nBecause: probably not useful...");
          because ( true == true )
          {
             WriteLine("The universe is still intact!");
          }
+         
+         repeat(2) WriteLine();
+         
+         WriteLine(It'sMyTimeNow());
+         
+         repeat(2) WriteLine();
         
-
+         ignore {
+            throw Exception("This will be ignored");
+         }
+         
          // Compile-time parsing of strings into obnoxious syntax
          ContrivedHL7();
+         
+         // Other possibilities!
+         //http://nemerle.org/wiki/index.php?title=MacroUse
+         // Design by contract 
+         // Compile-time validation of SQL or Regexes (embedded languages)
+         // Partial evaulation of functions
+         // Concurrency constructs https://github.com/rsdn/nemerle/blob/master/snippets/concurrency
+         // Design patterns
+         // Aspect-oriented programming
       }
 
       ContrivedHL7() : void

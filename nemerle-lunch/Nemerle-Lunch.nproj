@@ -79,7 +79,7 @@
     <Compile Include="Loopy.n">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LousyCube.n">
+    <Compile Include="CubeN.n">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Macros.n">

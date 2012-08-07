@@ -9,87 +9,91 @@ using System.Collections.Generic;
 
 namespace Nemerle_Lunch
 {
-  module Functions
-  {
-     public Example() : void
-     {
-        Invite("Jill");
-        
-        WriteLine("Secret message: " + disClosure()());
-        
-        WriteLine();
-        
-        WriteLine($[1 .. 10].Map(fun (x) { x * x }));
-        
-        WriteLine($[0,5 .. 20].Map(x => x * x ));
-        
-        WriteLine();
-        
-        def cook(items : string) { $"I'm cookin' some $items!" }
-        
-        WriteLine(DoAction(cook, "pho"));
-        
-        WriteLine(DoAction(i => $"Throw out smelly $i", "vegtables"));
-        
-        repeat(2) WriteLine();
-        
-        PartialApplication();
-        
-        repeat(2) WriteLine();
-     }
-     
-     Invite(person : string) : void
-     {
-        def sayHi(name : string)
-        {
-           $"Hi there $name"
-        }
-        
-        def inviteToParty(name : string)
-        {
-           $"Won't you attend my party $name?"
-        }       
-        
-        def sayGoodbye()
-        {
-           "See you around!"
-        }
-        
-        WriteLine(sayHi(person));
-        WriteLine(inviteToParty(person));
-        WriteLine(sayGoodbye());
-     }
-     
-     disClosure() : void -> string
-     {
-        def secretMessage = "I'm inside the compound";
-        def mole() : string
-        {
-           secretMessage
-        }
-        mole
-     }
-     
-     DoAction(action : string -> string, thing : string) : string
-     {
-        action(thing);
-     }
-     
-     PartialApplication() : void
-     {
+   module Functions
+   {
+      public Example() : void
+      {
+         repeat(2) WriteLine();
+         
+         Invite("Jill");
+
+         WriteLine("Secret message: " + disClosure()());
+
+         WriteLine();
+
+         WriteLine($[1 .. 10].Map(fun (x) { x * x }));
+
+         WriteLine($[0,5 .. 20].Map(x => x * x ));
+
+         WriteLine();
+
+         def cook(items : string) { $"I'm cookin' some $items!" }
+
+         WriteLine(DoAction(cook, "pho"));
+
+         WriteLine(DoAction(i => $"Throw out smelly $i", "vegtables"));
+
+         repeat(2) WriteLine();
+
+         PartialApplication();
+
+         repeat(2) WriteLine();
+      }
+
+      Invite(person : string) : void
+      {
+         def sayHi(name : string)
+         {
+            $"Hi there $name"
+         }
+
+         def inviteToParty(name : string)
+         {
+            $"Won't you attend my party $name?"
+         }       
+
+         def sayGoodbye()
+         {
+            "See you around!"
+         }
+
+         WriteLine(sayHi(person));
+         WriteLine(inviteToParty(person));
+         WriteLine(sayGoodbye());
+      }
+
+      disClosure() : void -> string
+      {
+         def secretMessage = "I'm inside the compound";
+         def mole() : string
+         {
+            secretMessage
+         }
+         mole
+      }
+
+      DoAction(action : string -> string, thing : string) : string
+      {
+         action(thing);
+      }
+
+      PartialApplication() : void
+      {
          def factorial(n, acc) {
             if (n==1 || n == 0)
                acc
             else
                factorial(n-1, n*acc)
          }
-         
+
          def factFromOne = factorial(_, 1);
          def factTimesFour = factorial(_, 4);
-         
+
          WriteLine($"7! is normally $(factFromOne(7))");
          WriteLine($"7! times four is $(factTimesFour(7))");
          WriteLine($"4! times 7 is $(factorial(_,7)(4))");
-     }
-  }
+         
+         //http://nemerle.org/wiki/index.php?title=Partial_evaluation
+      }
+   }
 }

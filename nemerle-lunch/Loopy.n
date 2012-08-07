@@ -14,7 +14,6 @@ namespace Nemerle_Lunch
    {
       public Example() : void
       {
-
          StandardForLoop();
          
          ForEachRange();
@@ -26,6 +25,8 @@ namespace Nemerle_Lunch
          ForEachInList();
          
          Repeat();
+         
+         Comprehension();
       }
       
       StandardForLoop() : void
@@ -33,7 +34,7 @@ namespace Nemerle_Lunch
          Write("Basic C-like for loop: ");
          for (mutable i = 0; i < 23; i+=2) 
             Write($"$i ");
-         WriteLine("\n");
+         repeat(2) WriteLine();
       }
       
       ForEachRange() : void
@@ -41,7 +42,7 @@ namespace Nemerle_Lunch
          Write("For each-- range by ones: ");
          foreach (i in [1..10])
             Write($"$i ");
-         WriteLine("\n");
+         repeat(2) WriteLine();
       }
       
       ForEachRangeReversed() : void
@@ -49,7 +50,7 @@ namespace Nemerle_Lunch
          Write("For each-- reverse range by twos: ");
          foreach (i in [22, 20..0])
             Write($"$i ");
-         WriteLine("\n");
+         repeat(2) WriteLine();
       }
       
       WhileLoops() : void
@@ -67,7 +68,7 @@ namespace Nemerle_Lunch
             i++;
          } while( i < 20 );
 
-         WriteLine("\n");
+         repeat(2) WriteLine();
       }
       
       ForEachInList() : void
@@ -76,7 +77,7 @@ namespace Nemerle_Lunch
          def lst = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
          foreach (i in lst)
             Write($"$i ");
-         WriteLine("\n");
+         repeat(2) WriteLine();
       }
       
       Repeat() : void
@@ -84,7 +85,17 @@ namespace Nemerle_Lunch
          Write("Repeat: ");
          repeat(13)
             Write("13 ");
-         WriteLine("\n");
+         repeat(2) WriteLine();
+      }
+      
+      Comprehension() : void
+      {
+         //http://nemerle.org/List_comprehensions
+         WriteLine();
+         WriteLine("Comprehensions");
+         WriteLine($[1..10]);
+         WriteLine($[x | x in [1..10]]);
+         WriteLine();
       }
    }
 }

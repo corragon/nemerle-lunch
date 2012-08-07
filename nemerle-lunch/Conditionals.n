@@ -20,13 +20,14 @@ namespace Nemerle_Lunch
          WriteLine(whenUnless(10));
          WriteLine(whenUnless(20));
          WriteLine(whenUnless(89));
+         
+         repeat(2) WriteLine();
       }
       
       ifElse(n : int) : string
       {
-         //if statements must be followed by an else
          if (n > 10) $"$n is larger than ten!"
-         else $"$n is smaller than ten."
+         else $"$n is smaller than or equal to ten."
       }
 
       whenUnless(age : int) : string
