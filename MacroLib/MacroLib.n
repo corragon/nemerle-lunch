@@ -44,10 +44,12 @@ namespace MacroLib
    syntax ("hl7", ".", segment)
    {   
       // aka, superFancyRegexThatStephenWrote
-      def reg = Regex(@"^(?<segmentName>[A-Z]{3})(?:(?:\[(?<segmentIndex>\d+)\])?(?:\.(?<fieldNumber>\d+)(?:\[(?<fieldRepetition>\d+)\])?(?:\.(?<component>\d+)(?:\.(?<subComponent>\d+))?)?)?)?$", RegexOptions.Compiled);
-      mutable m = reg.Match(segment);
+      def reg = Regex(@"^(?<segmentName>[A-Z]{3})(?:(?:\[(?<segmentIndex>(?:\d+)|(?:[A-Z]{3}))\])?(?:\.(?<fieldNumber>\d+)(?:\[(?<fieldRepetition>\d+)\])?(?:\.(?<component>\d+)(?:\.(?<subComponent>\d+))?)?)?)?$", RegexOptions.Compiled);
+      def m = reg.Match(segment);
 
-      // Some advanced parsing of the string
+      unless (m.Success)
+         throw ArgumentException();
+      
       def segment = m.Groups[reg.GroupNumberFromName("segmentName")].Value;
       def segIndexRaw = m.Groups[reg.GroupNumberFromName("segmentIndex")].Value;
       def fieldNumRaw = m.Groups[reg.GroupNumberFromName("fieldNumber")].Value;
